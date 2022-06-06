@@ -1,0 +1,106 @@
+#Comandos no Terminal(Windows) 
+
+
+dir: Lista as pastas(diretorios) da pasta atual. ls no Linux   
+ls –a : exibe arquivos ocultos 
+
+cd: Mudar diretorio(change directory). Igual no Linux 
+cd \: Diretorio raiz 
+cd .. : Volta um nivel. Cd ..\ no Linux 
+
+Cls: Limpar tela. Clear( ou ctrl L) no Linux 
+
+Mkdir: Cria um diretorio( make directory). Igual no Linux 
+
+Echo: Imprime na tela 
+
+Echo hello > hello.txt. O “>” redireciona para o arquivo, caso não exista, é criado 
+
+Del pasta: Deleta apenas os arquivos dentro da pasta. Rm no linux 
+
+Rmdir pasta(flags /S /Q): Deleta a pasta e os arquivos dela. Rm no Linux(flags –rf, r para deletar pastas internas e f para não exibir mensagens de confirmação) 
+
+Mv arquivo: Move o arquivo para outra pasta 
+$ mv strongonoff.txt ./receitas/ (./ pasta atual) 
+
+# Funcionamento do Git 
+
+## SHA1 
+
+ 
+Secure Hash Algorithm(Algoritmo de Hash Seguro), é um conjunto de funções criptográficas, gera um conjunto de 40 caracteres para cada arquivo 
+
+Objetos Git 
+
+Blob: Contem metadados do arquivo
+
+Tree: Armazenas blob ou outras tree, tambem armazena os metadados da propria arvore
+
+Commit: Aponta para a tree, parente(ultimo commit), autor, mensagem e a data. 
+
+## Segurança
+
+### Chave SSH(augusto) 
+
+Forma seguro e encriptada de conectar duas maquinas 
+
+Para criar sua chave SSH e conectar seu pc com o servidor do GitHub, abrir o git bash e digitar: 
+$ ssh-keygen -t ed25519 -C email 
+
+/c/Users/pingu/.ssh/ 
+
+cat id_ed25519.pub // Mostra a chave pública 
+
+eval $(ssh-agent -s) // Ativando o agente SSH 
+
+$ ssh-add id_ed25519 
+
+Para clonar repositorio: 
+Ir no repositorio, clicar em Code e clone em SSH, copiar o codigo 
+Abrir o git bash e digitar 
+$ git clone codigo_gerado 
+
+ 
+
+### Token de acesso pessoal 
+
+Settings -> Developer settings -> Personal acess tokens 
+Marque repo 
+Para clonar,  code com https 
+Abrir git Bash 
+
+# Comandos Git 
+
+Git init: Inicializa o git dentro da pasta e cria um repositorio git 
+
+Git status: Exibe a situação atual do git 
+
+Na primeira vez usando o git pedirá um email e um usuário: 
+$ git config --global user.email joaootsugua@gmail.com 
+$ git config --global user.name JoaoA 
+
+
+$ git add *: Adiciona o arquivo ou pasta ao staged(palco) 
+$ git commit -m "Mensagem": Sobe para o repositorio local, tornando os arquivos unmodified 
+ 
+$ git remote add origin repositorio: Indica o repositorio remoto a ser usado.  
+PS: origin é um apelido, pode ser qualquer nome, mas por convenção usasse origin 
+
+$ git remote –v: exibe as conexões remotas 
+
+$ git push origin master: Empurra do repositorio local(Maquina atual) para o remoto(GitHub) 
+
+Git pull: Puxar do repositorio remoto para o local 
+git pull origin master 
+
+Git clone url: Clona o repositorio remoto para um repositorio local 
+
+## Estagios de arquivos no repositorio: 
+
+Untracked: Não visivel ao Git 
+
+Unmodified: Sem modificação 
+
+Modified: Arquivo modificado 
+
+Staged: “No palco”, arquivos esperando serem commitados 
