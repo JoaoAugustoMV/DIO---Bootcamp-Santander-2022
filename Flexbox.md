@@ -46,3 +46,14 @@ PS: Se os filhos ocuparem todo o espaço do container, a propriedade será ignor
 
   - stretch: padrão, os flex crescem igualmente ![image](https://user-images.githubusercontent.com/93055242/172505216-a070a49f-d418-479c-8cca-d037e071bc00.png)
 
+## Propriedades para flex itens
+
+- flex grow: Define a proporção de crescimento do item, respeitando o limete do conteudo interno(valores inteiros)
+PS: Não funciona se o container(pai) estiver com justify-content![image](https://user-images.githubusercontent.com/93055242/172734010-d19252a9-b874-498b-a83d-a15c0119fd8a.png)
+
+- flex-basis:
+- flex-shrink:
+- flex: grow shrink basis( Shorthand)
+  -  flex: 1 | grow = 1 shrink = 1 basis = 0
+  -  flex: 2 | grow = 2 shrink = 1 basis = 0
+
