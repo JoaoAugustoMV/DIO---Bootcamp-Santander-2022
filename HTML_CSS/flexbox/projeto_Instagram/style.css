@@ -1,0 +1,155 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+
+body{
+background-color: rgb(247, 247, 247);
+}
+
+
+section.conteudo{
+   display: flex;
+   margin-top: 25px;
+   justify-content: center;
+   align-items: center;
+   min-width: 335px;
+}
+
+
+div.amostras img{
+    max-width: 35vw;
+    max-height: 90vh;
+}
+
+div.acessar{
+    display:flex;
+    flex-direction:column;
+    margin: 10px;
+    margin: 0px 40px;
+    
+}
+
+section.login{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    height:60vh;
+    min-width: 335px;
+    
+}
+
+
+
+div.dados_entrar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#logo_instagram{
+    max-width: 210px;
+    margin-bottom:25px;
+    margin-top: 40px;
+}
+
+section.login{
+    border: 1px solid rgb(212, 210, 210);
+    height: 80%;
+}
+input.login{
+    border: 1px solid rgb(85, 84, 84);
+    background-color:rgb(247, 247, 247);
+    margin: 5px;
+    margin-bottom: 15px;
+    padding: 2px;
+    border-radius: 5px;
+    width: 250px;
+    height: 30px;
+}
+
+#btn_entrar{
+    background-color:rgb(59, 172, 220);
+    color:white;
+    font-size: 15px;
+    border: 0;
+    border-radius: 2px;
+    width: 255px;
+    margin-bottom: 10px;
+    
+}
+section.login p{
+    color: grey;
+    margin-top: 10px;
+    
+}
+section.login hr{
+    
+}
+
+#logo_facebook{
+    max-width: 30px;
+}
+
+section.login a{
+    text-decoration:none;
+    color:#3b5998;
+}
+
+#entrar_facebook{
+    margin-bottom:10px;
+}
+
+#esqueci_senha{
+    font-size:14px;
+}
+
+section.cadastro{
+    background-color: white;
+    margin:20px 0;
+    padding:10px;
+    border: 1px solid rgb(212, 210, 210);
+}
+
+section.cadastro p{
+    text-align: center;
+    
+}
+
+#btn_cadastrar{
+    text-decoration: none;
+    color: rgb(0, 149, 255);
+    font-weight: bold;
+}
+
+section.download_app{
+    background-color: rgb(255, 255, 255);
+   
+
+}
+
+section.download_app img{
+    max-width:130px;
+    margin-top: 20px;
+
+}
+section.download_app p{
+    text-align: center;
+}
+.imgs_lojas_app{
+    display: flex;
+    justify-content: space-evenly;
+}
+    
+@media(max-width:1000px){
+
+}
+
+@media(max-width: 700px){
+    div.amostras img{
+        display:none;
+        
+    }
+}
