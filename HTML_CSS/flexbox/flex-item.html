@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Itens</title>
+    <style>
+        .flex{
+            display: flex;
+            border: 2px solid black;
+            max-width: 700px;
+        }
+        .item{
+            background-color: red;
+            margin: 5px;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        .fg0{
+            flex-grow: 0;
+        }
+
+        .fg1{
+            flex-grow: 1;
+        }
+
+        .fg2{
+            flex-grow: 2;
+        }
+        
+        .fg3{
+            flex-grow: 3;
+        }
+
+        .fBasisAuto{
+            flex-basis: auto;
+        }
+        .fBasis0{
+            flex-basis: 0;
+        }
+
+        
+    </style>
+</head>
+    <h1>Flex Itens</h1>
+    <h2>flex-grow</h2>
+    <div class="flex">
+        <div class="item fg0">A(0)</div>
+        <div class="item fg2">C(2)</div>
+        <div class="item fg3">D(3)</div>
+        <div class="item fg2">E(2)</div>
+        <div class="item fg1">B(1)</div>
+    </div>
+
+    <h2>flex-basis</h2>
+    <div class="flex">
+        <div class="item fg1 fBasis0">A(0)</div>
+        <div class="item fg1 fBasis0">B(1)</div>
+        <div class="item fg1 fBasis0">C(2)</div>
+        <div class="item fg2 fBasis0">D(3)</div>
+        <div class="item fg1 fBasis0">E(2)</div>
+    </div>
+
+
+<body>
+    
+</body>
+</html>

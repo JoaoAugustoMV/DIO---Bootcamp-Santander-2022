@@ -1,0 +1,46 @@
+<h2> Course List </h2>
+
+<div class="form-group row"> <!--Classes bootstrap-->
+    <label for="" class="col-sm-2 col-from-label">Filter By:</label>
+
+    <div class="col-sm-10">  <!--Classes bootstrap-->
+        <input class="form-control" [(ngModel)]="filter">  <!--Classes bootstrap-->
+        <!--Filtro: usando o [(two way data bind)]
+            - [(ngModel)] = variavel ('binda' este input com a variavel)
+        
+        -->
+    </div>
+</div>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+       
+            <th>Image</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Code</th>
+            <th>Rating</th>
+            <th>Release Date</th>
+            <th>Options</th>
+        
+    </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let course of filteredCourses"> <!--Notação Angular-->
+            <td> <img [src]="course.imageUrl" alt="" [width]="imgSize"></td> <!--Passar para o atributo da tag HTML alguma informação do Angular-->
+            <td> {{course.name }}</td>
+            <td> {{course.price }}</td>
+            <td> {{course.code | lowercase | replace: '-': ' '}}</td>
+            <td> 
+                <app-star [rating]="course.rating"></app-star>
+            </td>
+            <td> {{ course.releaseDate | date: 'dd/MM/yyyy'}}</td> <!-- data pipe-->
+            <td> <!--Options-->
+                <!-- [routerLink] = ['rota ou URL', 'atributo'] -->
+                <a [routerLink]="['/courses/info', course.id]" class="btn btn-primary">Edit</a>
+
+            </td>
+        </tr>
+    </tbody>
+</table>

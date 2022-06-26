@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+    <style>
+       
+        .flex-column{
+            max-width: 300px;
+            padding: 10px;
+            border: 2px solid black;
+            display:flex;
+            flex-direction: column;
+            max-height: 30px;
+            flex-wrap: wrap;
+            
+        }
+        .flex-row{
+            max-width: 300px;
+            padding: 10px;
+            border: 2px solid black;
+            display:flex;
+            flex-direction: row;
+            flex-wrap: wrap;  
+                      
+        }
+        .flex-justify-content{
+            display: flex;
+            flex-direction: row;
+            width: 500px;
+            border: 4px solid black;
+            justify-content: space-around;
+            margin-bottom: 15px;
+        }
+        .item{
+            background-color: aqua;
+            margin: 5px;
+        }
+        .itens{
+            background-color: red;
+            color:white;
+            
+            padding:1px;
+            border: 2px solid rgb(3, 108, 255);
+            margin: 5px;
+            flex: 1;
+        }
+        .lista1{
+            list-style: none;
+            background-color: red;
+            
+            
+            margin:5px;
+        }
+        .align-itens{
+            display:flex;
+            align-items: flex-end;
+            max-width: 300px;
+            border: 7px solid black;
+        }
+        .central{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            width: 600px;
+            height: 300px;
+            border: 5px solid black;
+            flex: 0;
+        }
+        div.central > p{
+            background-color: khaki;
+            padding: 10px;
+            width: 150px;
+            height: 150px;
+        }
+        .align-content{
+            display: flex;
+            height: 400px;
+            max-width: 500px;
+            border: 5px solid black;
+            flex-wrap: wrap;
+            align-content: space-between;
+            
+        }
+        div.align-content > div{
+            text-align: center;
+            padding: 0 5px;
+            margin: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>flex-direction</h1>
+    <div class="flex-column">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+    <h1>flex-wrap</h1>
+    <ul class="flex-row">
+        <li class="lista1">Item 1</li>
+        <li class="lista1">Item 2</li>
+        <li class="lista1">Item 3</li>
+        <li class="lista1">Item 4</li>
+        <li class="lista1">Item 5</li>
+        <li class="lista1">Item 6</li>
+        <li class="lista1">Item 7</li>
+        <li class="lista1">Item 8</li>
+        <li class="lista1">Item 9</li>
+    </ul>
+    <h1>flex-justify-content</h1>
+    <div class="flex-justify-content">
+        <div class="itens">1</div>
+        <div class="itens">2</div>
+        <div class="itens">3</div>
+        <div class="itens">4</div>
+        <div class="itens">5</div>
+        <div class="itens">6</div>
+    </div>
+    <h1>align-itens</h1>
+    <div class="align-itens">
+        <div class="itens">1</div>
+        <div class="itens">ABC</div>
+        <div class="itens">Lorem ipsum  </div>
+        <div class="itens">Teste</div>
+        <div class="itens">Tes</div>
+        <div class="itens">Te</div>
+        <div class="itens">Lorem ipsum fugit quibusdam iure a provident nostrum!</div>
+    </div>
+
+    <h1>Alinhar no centro</h1>
+    <div class="central">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam harum porro corru vero nulla?</p>
+    </div>
+
+    <h1>align-content</h1>
+        <div class="align-content"><div class="itens">1</div>
+        <div class="itens">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam voluplorum illo exercitationem.</div>
+        <div class="itens">Lorem ipsum  </div>
+        <div class="itens">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, repudiandae quam, natus vero minus impedit est quod dolores id at eaque?</div>
+        <div class="itens">Loreepturi veritatis autem cupiditate?</div>
+        <div class="itens">Te</div>
+        <div class="itens">Lorem ipsum fugit quibusdam iure a provident nostrum!</div>
+</div>
+</body>
+</html>

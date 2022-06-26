@@ -27,6 +27,7 @@ interface Pessoa{ // Lista de atributos
     nome:string,
     idade: number
     profissao?: Profissao // ?: atributo não obrigatorio
+    sexo?: 'M' | 'F'
 }
 interface Estudante extends Pessoa { // Herda os atributos da interface Pai
     materias: string[]
