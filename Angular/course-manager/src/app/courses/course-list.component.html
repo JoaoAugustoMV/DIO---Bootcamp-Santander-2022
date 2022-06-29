@@ -33,6 +33,7 @@
             <td> {{course.price }}</td>
             <td> {{course.code | lowercase | replace: '-': ' '}}</td>
             <td> 
+                <!-- [atr do componente Star]=info  -->
                 <app-star [rating]="course.rating"></app-star>
             </td>
             <td> {{ course.releaseDate | date: 'dd/MM/yyyy'}}</td> <!-- data pipe-->

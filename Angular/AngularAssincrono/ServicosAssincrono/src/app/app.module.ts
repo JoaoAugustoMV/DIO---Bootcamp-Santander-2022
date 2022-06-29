@@ -10,6 +10,8 @@ import { FormularioUsuarioComponent } from './paginas/usuarios/formulario-usuari
 import { ListaUsuariosComponent } from './paginas/usuarios/lista-usuarios/lista-usuarios.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DataBindingComponent } from './paginas/data-binding/data-binding.component';
+import { BotaoComponent } from './componentes/botao/botao.component';
+import { CicloDeVidaComponent } from './componentes/ciclo-de-vida/ciclo-de-vida.component';
 
 
 @NgModule({
@@ -19,6 +21,8 @@ import { DataBindingComponent } from './paginas/data-binding/data-binding.compon
     ListaUsuariosComponent,
     FormularioUsuarioComponent,
     DataBindingComponent,
+    BotaoComponent,
+    CicloDeVidaComponent,
     
   ],
   imports: [

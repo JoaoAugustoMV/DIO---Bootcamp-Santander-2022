@@ -36,10 +36,30 @@ Troca de informação entre o dom e os componentes
 
 ### Componente para DOM
 - Interpolação: {{ var }}, exibir informações
-- Propriedade binding: [atr]=""
+- Propriedade binding: [atr]="info do componente"
 ### DOM para componente
 - Evento bindig: (click)="func()"
-- Two way data Binding: [(ngModel)]="info"
+- Two way data Binding: [(ngModel)]="info"( importar FormsModule)
+
+
+## Ciclo de Vida de Componentes
+- constructor
+- ngOnChanges(): chamada uma vez na criação e sempre que houver alguma alteração em **inputs**
+- ngOnInit: chamado uma vez na criação
+- ngDoCheck(): chamado a cada ciclo de detecções de alterações(usado para mudanças que o Angular não detecta)
+- ngAfertContentInit: chamado depois que um conteudo externo é inserido no component
+- - Ex: Conteudo vindo de <ng-content>
+- ngAfterContentChecked: Após verificaçõ de conteudo externo
+- ngAfterViewInit: Após o conteudo do componente e seus filhos forem inicializados
+- ngAfterViewCheck: Sempre que conteudo é o Angular detecta alterações
+- ngOnDestroy(): **Antes** do Angular destruir o componente
+
+## Decorators
+
+- @Input() atr = 'flemis'
+- - O componente recebe informações(em .ts) atraves dos elementos(em .html)
+- @Injectable({ // Injeção de dependência
+- - provideIn: 'root' })// Ao carregar o app.module.ts(modulo raiz), tbm carregará esta classe de serviço
 # Lembrar
 
 - O Angular dá poder ao HTML(React dá poder ao JS)

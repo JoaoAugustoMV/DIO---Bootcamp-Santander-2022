@@ -14,6 +14,10 @@ export class DataBindingComponent implements OnInit {
   btnText = 'Click aqui'
 
   textoVermelho = false
+
+  textoInput = ''
+
+  numeroPai = 10
   constructor() { }
 
   ngOnInit(): void {
@@ -24,4 +28,16 @@ export class DataBindingComponent implements OnInit {
     console.log(' ELeMesmo', this.texto, ' Clicou')
   }
 
+  twoWayDataBinding(){
+    console.log('this.textoInupt é: ', this.textoInput)
+  }
+
+  clicouNoFilho(texto: any){
+    console.log(texto)
+  }
+
+  incrementa(numeroPai: number){
+    this.numeroPai++
+  }
+  
 }

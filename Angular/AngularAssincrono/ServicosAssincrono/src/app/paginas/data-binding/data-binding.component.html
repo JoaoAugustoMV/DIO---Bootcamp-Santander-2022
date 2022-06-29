@@ -1,5 +1,6 @@
 <!-- Classe Binding -->
 <!-- [class.flemis]="boolean": Será atribuida a classe flemis dependendo do valor do atr passado(true ou false) -->
+<!-- Parecido com o [ngClass] -->
 <p [class.textoVermelho]="textoVermelho">data-binding works!</p>
 <p> {{ texto }}</p>
 
@@ -7,4 +8,18 @@
 
 
 <!-- Cria dinamicamente o atributo -->
-<button [attr.aria-label]="btnText"> {{ btnText }}</button>
+<button [attr.aria-label]="btnText" (click)="twoWayDataBinding()"> {{ btnText }}</button>
+
+<input type="text" class="form-control" [(ngModel)]="textoInput">
+<label for="">{{ textoInput }}</label>
+
+<app-botao [btnTexto]="'Clique Aqui!'" ></app-botao>
+<app-botao [btnTexto]="'Oolha só'" [btnTipo]="'btn-success'"></app-botao>
+<!--  (clickEmitter)="clicouNoFilho($event)" -->
+<!-- (EventEmiitter)="metodo do pai, recebe um evento como parametro" -->
+<!-- Criado no componente botao(filho)="metodo do Componente data-binding" -->
+<app-botao btnTexto="filho" btnTipo="btn-danger" (clickEmitter)="clicouNoFilho($event)"></app-botao>
+
+<app-ciclo-de-vida [numeroFilho]="numeroPai"></app-ciclo-de-vida>
+<p>{{ numeroPai }}</p>
+<app-botao (click)="incrementa(numeroPai)"></app-botao>
