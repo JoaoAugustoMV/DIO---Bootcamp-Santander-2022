@@ -7,23 +7,26 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th>Id</th>
-                    <th>Nome</th>
-                    <th>Idade</th>
-                    <th>Profissao</th>
-                    <th colspan="2"></th>
+                    <th class="text-center">Id</th>
+                    <th class="text-center">Nome</th>
+                    <th class="text-center">Idade</th>
+                    <th class="text-center">Profissao</th>
+                    <th class="text-center" colspan="2"></th>
                 </tr>
             </thead>
-                <td>1</td>
-                <td>joao</td>
-                <td>19</td>
-                <td>Funcionario Publico</td>
-                <td>
-                    <button class="btn btn-primary">Editar</button>
-                </td>
-                <td>
-                    <button class="btn btn-danger">Excluir</button>
-                </td>
+            <tr *ngFor="let usuario of usuarios">
+                    <td class="text-center">{{ usuario.id }}</td>
+                    <td class="text-center">{{ usuario.nome }} {{ usuario.sobrenome }}</td>
+                    <td class="text-center">{{ usuario.idade }}</td>
+                    <td class="text-center">{{ usuario.profissao }}</td>
+                    <td class="text-center">
+                        <!-- routerLink: '/form/${id}' URL com o id do usuario -->
+                        <button class="btn btn-outline-success" [routerLink]="['/form', usuario.id]">Editar</button>
+                    </td>
+                    <td class="text-center">
+                        <button class="btn btn-outline-danger" (click)="excluir(usuario.id)">Excluir</button>
+                    </td>
+            </tr>
             <tbody></tbody>
         </table>
     </div>

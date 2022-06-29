@@ -1,0 +1,10 @@
+<!-- Classe Binding -->
+<!-- [class.flemis]="boolean": Será atribuida a classe flemis dependendo do valor do atr passado(true ou false) -->
+<p [class.textoVermelho]="textoVermelho">data-binding works!</p>
+<p> {{ texto }}</p>
+
+<img [src]="urlImg" [alt]="descImg" (click)="clicou()">
+
+
+<!-- Cria dinamicamente o atributo -->
+<button [attr.aria-label]="btnText"> {{ btnText }}</button>

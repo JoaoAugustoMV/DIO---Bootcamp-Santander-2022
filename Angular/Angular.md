@@ -30,6 +30,16 @@
 
 - HttpClient: Usado para fazer a comunicação entre cliente e servidor usando protocolo HTTP
 
+
+## Data Binding
+Troca de informação entre o dom e os componentes
+
+### Componente para DOM
+- Interpolação: {{ var }}, exibir informações
+- Propriedade binding: [atr]=""
+### DOM para componente
+- Evento bindig: (click)="func()"
+- Two way data Binding: [(ngModel)]="info"
 # Lembrar
 
 - O Angular dá poder ao HTML(React dá poder ao JS)
