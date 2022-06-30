@@ -6,6 +6,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./botao.component.css']
 })
 export class BotaoComponent implements OnInit {
+  // 
   @Input() btnTexto = 'Clique' // Default(caso não passe nada em [btnTexto])
   @Input() btnTipo = '' // Default
 

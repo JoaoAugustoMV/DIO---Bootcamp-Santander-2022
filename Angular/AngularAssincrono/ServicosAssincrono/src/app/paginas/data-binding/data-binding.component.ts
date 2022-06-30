@@ -17,7 +17,9 @@ export class DataBindingComponent implements OnInit {
 
   textoInput = ''
 
-  numeroPai = 10
+  numeroPai = 10 // É atribuido ao numeroFilho(variavel do cicloDeVidaComponent), atraves do property binding
+
+  destruir = false
   constructor() { }
 
   ngOnInit(): void {
@@ -38,6 +40,10 @@ export class DataBindingComponent implements OnInit {
 
   incrementa(numeroPai: number){
     this.numeroPai++
+    console.log('--------------------------')
   }
   
+  destruirComponente(){
+    this.destruir = true
+  }
 }

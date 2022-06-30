@@ -10,16 +10,21 @@
 <!-- Cria dinamicamente o atributo -->
 <button [attr.aria-label]="btnText" (click)="twoWayDataBinding()"> {{ btnText }}</button>
 
+<!-- Two Way Data Binding -->
 <input type="text" class="form-control" [(ngModel)]="textoInput">
 <label for="">{{ textoInput }}</label>
 
+<!-- [btnTexto] -->
 <app-botao [btnTexto]="'Clique Aqui!'" ></app-botao>
 <app-botao [btnTexto]="'Oolha só'" [btnTipo]="'btn-success'"></app-botao>
+
+
 <!--  (clickEmitter)="clicouNoFilho($event)" -->
 <!-- (EventEmiitter)="metodo do pai, recebe um evento como parametro" -->
 <!-- Criado no componente botao(filho)="metodo do Componente data-binding" -->
 <app-botao btnTexto="filho" btnTipo="btn-danger" (clickEmitter)="clicouNoFilho($event)"></app-botao>
 
-<app-ciclo-de-vida [numeroFilho]="numeroPai"></app-ciclo-de-vida>
+<app-ciclo-de-vida [numeroFilho]="numeroPai" *ngIf="!destruir"></app-ciclo-de-vida>
 <p>{{ numeroPai }}</p>
-<app-botao (click)="incrementa(numeroPai)"></app-botao>
+<app-botao (click)="incrementa(numeroPai)" ></app-botao>
+<app-botao btnTexto="Destruir" btnTipo="btn-danger" (click)="destruirComponente()"></app-botao>
