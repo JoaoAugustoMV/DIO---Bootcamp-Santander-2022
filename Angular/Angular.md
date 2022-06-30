@@ -37,6 +37,7 @@ Troca de informação entre o dom e os componentes
 ### Componente para DOM
 - Interpolação: {{ var }}, exibir informações
 - Propriedade binding: [atr]="info do componente"
+- - Tbm recebe info para atr do componente
 ### DOM para componente
 - Evento bindig: (click)="func()"
 - Two way data Binding: [(ngModel)]="info"( importar FormsModule)
@@ -44,15 +45,18 @@ Troca de informação entre o dom e os componentes
 
 ## Ciclo de Vida de Componentes
 - constructor
-- ngOnChanges(): chamada uma vez na criação e sempre que houver alguma alteração em **inputs**
-- ngOnInit: chamado uma vez na criação
-- ngDoCheck(): chamado a cada ciclo de detecções de alterações(usado para mudanças que o Angular não detecta)
+- **ngOnChanges**: chamada uma vez na criação e sempre que houver alguma alteração em **inputs**
+- **ngOnInit**: chamado uma vez na criação
+- ngDoCheck: chamado a cada ciclo de detecções de alterações(usado para mudanças que o Angular não detecta)
 - ngAfertContentInit: chamado depois que um conteudo externo é inserido no component
 - - Ex: Conteudo vindo de <ng-content>
 - ngAfterContentChecked: Após verificaçõ de conteudo externo
 - ngAfterViewInit: Após o conteudo do componente e seus filhos forem inicializados
 - ngAfterViewCheck: Sempre que conteudo é o Angular detecta alterações
-- ngOnDestroy(): **Antes** do Angular destruir o componente
+- **ngOnDestroy**: **Antes** do Angular destruir o componente
+
+Ps: Com exceção de OnInit e OnDestroy, os restante sempre que é ocorre mudança é executado
+Ps: Com exceção de OnDestroy, todos são executados quando iniciado o componente
 
 ## Decorators
 
@@ -90,8 +94,9 @@ Troca de informação entre o dom e os componentes
 
 - [ngStyle]="{background: contador < 5? 'red': 'blue'}: Quando o contador for menor que 5 o background será red, quanto for maior será azul
 -[ngClass]="{maiorQ5: contador > 5}">: Será aplicada a classe maiorQ5 enquanto a condição for verdadeira
--  h2 *ngIf="contador > 6; else menor">: O elemento só aparecerá se a condição for true, caso for false aparecerá o elemento menor
-    -PS: o elemento usado no else deve ser a tag <**ng-template** #id> com seu identeficação(no caso menor)
+-  h2 *ngIf="contador > 6; else menor">: O elemento só aparecerá se a condição for true, caso for false aparecerá o elemento menor.
+- - PS: o elemento usado no else deve ser a tag <**ng-template** #id> com seu identeficação(no caso menor)
+- - PS: Caso não tenha segunda opção: true aparece, false não
 - ul [ngSwitch]="contador">: Elemento pai
     - *ngSwitchCase="3">, elemento filho
     - *ngSwitchCase="5">, elemento filho
