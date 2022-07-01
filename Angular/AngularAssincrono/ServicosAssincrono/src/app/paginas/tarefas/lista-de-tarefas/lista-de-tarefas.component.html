@@ -1,0 +1,17 @@
+<section class="wrapper">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Lista de Tarefas</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-form-field class="form-field">
+                <mat-label>Tarefa</mat-label>
+                <!-- #id: traasforma o id em um HTMLInputElement(no caso), como isso é possivel acessar todos seus atributos como id.value, que é passada como argumento para a função, bem como modifica o elemento -->
+                <input #tarefa matInput type="text" placeholder="Digite sua Tarefa" (keyup.enter)="adicionaTarefa
+                (tarefa.value); tarefa.value=''">
+                <!-- (keyup.enter): Evento que chama função quando a tecla Enter é pressionada -->
+                <!-- ;: segunda ação -->
+            </mat-form-field>
+        </mat-card-content>
+    </mat-card>
+</section>
