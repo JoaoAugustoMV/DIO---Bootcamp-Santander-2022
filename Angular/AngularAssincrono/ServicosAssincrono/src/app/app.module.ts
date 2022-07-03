@@ -8,6 +8,9 @@ import { AppComponent } from './app.component';
 import { MatInputModule} from '@angular/material/input'
 import { MatCardModule } from '@angular/material/card'
 import { MatGridListModule} from '@angular/material/grid-list'
+import { MatListModule } from '@angular/material/list'
+import { MatButtonModule} from '@angular/material/button'
+import { MatIconModule } from '@angular/material/icon'
 
 import { HeaderComponent } from './componentes/header/header.component';
 import { FormularioUsuarioComponent } from './paginas/usuarios/formulario-usuario/formulario-usuario.component';
@@ -18,6 +21,7 @@ import { BotaoComponent } from './componentes/botao/botao.component';
 import { CicloDeVidaComponent } from './componentes/ciclo-de-vida/ciclo-de-vida.component';
 import { ListaDeTarefasComponent } from './paginas/tarefas/lista-de-tarefas/lista-de-tarefas.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ItemTarefaComponent } from './paginas/tarefas/item-tarefa/item-tarefa.component';
 
 
 @NgModule({
@@ -30,6 +34,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BotaoComponent,
     CicloDeVidaComponent,
     ListaDeTarefasComponent,
+    ItemTarefaComponent,
     
   ],
   imports: [
@@ -41,7 +46,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserAnimationsModule,
     MatInputModule,   
     MatCardModule,
-    MatGridListModule
+    MatGridListModule,
+    MatListModule,
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

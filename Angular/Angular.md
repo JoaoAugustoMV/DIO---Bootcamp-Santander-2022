@@ -9,6 +9,7 @@
 -  injeção de dependência é um padrão de projeto no qual uma classe solicita dependências de fontes externas ao invés de criá-las
 - Classe de Serviço: feito para fornece funções
 - Data pipes: funções que formatam strings com modelos predinidos(ex: formatação de datas)
+- Angular Material: Componentes baseados no material design, padrão muito usado pelo Google
 
 # Funcionalidades
 - Módulos
@@ -71,6 +72,12 @@ Ps: Com exceção de OnDestroy, todos são executados quando iniciado o componen
 - Ao criar novo componente, 'avisar' ao modulo
 - <[atributo] = "info de Angular">. ex <img [src]="image.png">
 
+# Typescript
+
+- var?: atributo **opcional**
+- var!: atributo não será nulo
+
+
 # Arquivos/Pastas importantes 
 - e2e: Teste End-To-End
 - package.json: Possui todas dependências do projeto
@@ -92,11 +99,14 @@ Ps: Com exceção de OnDestroy, todos são executados quando iniciado o componen
 
 ## Diretivas
 
+
+### [ngStyle]
 - [ngStyle]="{background: contador < 5? 'red': 'blue'}: Quando o contador for menor que 5 o background será red, quanto for maior será azul
+
+### [ngClass]
 -[ngClass]="{maiorQ5: contador > 5}">: Será aplicada a classe maiorQ5 enquanto a condição for verdadeira
--  h2 *ngIf="contador > 6; else menor">: O elemento só aparecerá se a condição for true, caso for false aparecerá o elemento menor.
-- - PS: o elemento usado no else deve ser a tag <**ng-template** #id> com seu identeficação(no caso menor)
-- - PS: Caso não tenha segunda opção: true aparece, false não
+
+### [ngSwitch]
 - ul [ngSwitch]="contador">: Elemento pai
     - *ngSwitchCase="3">, elemento filho
     - *ngSwitchCase="5">, elemento filho
@@ -104,3 +114,15 @@ Ps: Com exceção de OnDestroy, todos são executados quando iniciado o componen
     - *ngSwitchCase="8">, elemento filho
     - *ngSwitchCase="10">, elemento filho,
     - *ngSwitchDefault>, elemento filho
+
+### *ngIf
+-  h2 ***ngIf**="contador > 6; else menor">: O elemento só aparecerá se a condição for true, caso for false aparecerá o elemento menor.
+- - PS: o elemento usado no else deve ser a tag <**ng-template** #id> com seu identeficação(no caso menor)
+- - PS: Caso não tenha segunda opção: true aparece, false não
+
+### *ngFor
+- : itera um iterator e adiciona um elemento para cada item
+- < ul>*ngFor="let item of lista" </ ul> 
+    < li> {{ item }}
+- PS: Acontece a iteração sempre que o iterator, recebe um adição, remoção ou mudança de ordem
+

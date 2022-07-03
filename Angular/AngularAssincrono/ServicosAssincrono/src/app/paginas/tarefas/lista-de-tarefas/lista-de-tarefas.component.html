@@ -3,6 +3,7 @@
         <mat-card-header>
             <mat-card-title>Lista de Tarefas</mat-card-title>
         </mat-card-header>
+
         <mat-card-content>
             <mat-form-field class="form-field">
                 <mat-label>Tarefa</mat-label>
@@ -12,6 +13,15 @@
                 <!-- (keyup.enter): Evento que chama função quando a tecla Enter é pressionada -->
                 <!-- ;: segunda ação -->
             </mat-form-field>
+
+            <mat-list role="list" *ngFor="let tarefa of listaTarefas">
+                <!-- [tarefa]="tarefa" -->
+                <!-- [atributo do filho]=iterador do ngFor -->
+                <app-item-tarefa [tarefa]="tarefa" (removerTarefaEmitter)="removerTarefa($event)"></app-item-tarefa>
+                <!-- (removerTarefaEmitter)="removerTarefa($event)" -->
+                <!-- (EventEmitter do filho)="função do pai(recebe um evento como parametro), evento = object" -->
+                <!-- removerTarefaEmitter: retorna a tarefa -->
+            </mat-list>
         </mat-card-content>
     </mat-card>
 </section>

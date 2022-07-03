@@ -1,0 +1,12 @@
+<mat-list-item role="listitem">
+    <p [ngStyle]="{textDecoration: concluida ? 'line-through' : 'none'}">
+         {{ tarefa.titulo }}
+    </p>
+    <button (click)="marcarConcluida()" mat-icon-button color="primary" aria-label="Marca como concluida">
+        <mat-icon>done</mat-icon>
+    </button>
+    <!-- removerTarefa: envia a tarefa ao elemento pai(listaDeTarefasCOmponent) -->
+    <button (click)="removerTarefa()" mat-raised-button color="warn">Excluir</button>
+</mat-list-item>
+
+
