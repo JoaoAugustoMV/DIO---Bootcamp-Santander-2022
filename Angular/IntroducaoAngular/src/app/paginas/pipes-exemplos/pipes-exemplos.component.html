@@ -1,0 +1,38 @@
+<div class="form-group">
+    <label for="number">Numero</label>
+    <input type="text" [(ngModel)]="numero" class="form-control" id="numero">
+    <button ></button>
+</div>
+
+<div class="">
+    <p>Numero: {{ numero }}</p>
+
+    <p>Texto: {{ texto }}</p>
+</div>
+
+<div class="">
+    <h2>Formatando Numeros</h2>
+    <p>Sem formatacao: {{ numero }}</p>
+    <!-- number: algarismos minimos inteiros.minimo de algarismo depois da virgula - max de algarismos depois da virgula1: localização1
+    Lembrar de importar a localização(LOCALE_ID)-->
+    <p>number: {{ numero | number:'2.0-1':'pt-BR'}} </p> 
+    <p>currency(moedas): {{ numero | currency:'BRL' }} </p> 
+
+    <h2>Formatando Datas</h2>
+    <p>Sem formatacao:  {{ data }}</p>
+    <p>Date:'dd/MM/yyyy':  {{ data | date:'dd/MM/yyyy' }}</p>
+    <p>Date:  {{ data | date:'long'}}</p>
+    <p>Date:'short':  {{ data | date:'short' }}</p>
+
+    <h2>Formatando Objetos ou JSON</h2>
+    <p>Sem formatacao: {{ pessoa }}</p>
+    <p>{{ pessoa | json }}</p>
+
+    <h2>Slice</h2>
+    <p>Sem formatacao: {{ texto }}</p>
+    <p>slice:2:8 -------- {{ texto | slice:2:8 }}</p>
+
+    <h2>Pipe Personalizavel</h2>
+    <p>exibeLista: {{ lista | exibeLista }}</p>
+</div>
+

@@ -65,6 +65,24 @@ Ps: Com exceção de OnDestroy, todos são executados quando iniciado o componen
 - - O componente recebe informações(em .ts) atraves dos elementos(em .html)
 - @Injectable({ // Injeção de dependência
 - - provideIn: 'root' })// Ao carregar o app.module.ts(modulo raiz), tbm carregará esta classe de serviço
+
+## Pipes( | )
+
+- Função que recebe valor e retorna valor transformado
+- Usado para formatar valores em templates nativas do Angular ou criado pelo dev
+- Lembrar de prover em module.ts
+
+### Tipos de Pipes
+
+- Puros: Padrões, ativam quando acontece mudanças **diretas** no valor de entrada
+- Impuros: Executam para cada detecção de mudanças
+
+### Exemplos
+
+- {{ text | uppercase}}: Todas letras maiusculas
+- {{ numero | number:digitInfo:locale }}: Formata numeros
+- {{ data | date:'dd/MM/yyyy' }}: Formata datas
+- {{ objeto | json }}: 
 # Lembrar
 
 - O Angular dá poder ao HTML(React dá poder ao JS)
