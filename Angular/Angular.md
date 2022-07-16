@@ -61,6 +61,7 @@ Ps: Com exceção de OnDestroy, todos são executados quando iniciado o componen
 
 ## Decorators
 
+- Indica ao Angular que tipo será classe
 - @Input() atr = 'flemis'
 - - O componente recebe informações(em .ts) atraves dos elementos(em .html)
 - @Injectable({ // Injeção de dependência
