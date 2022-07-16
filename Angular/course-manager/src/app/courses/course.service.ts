@@ -1,5 +1,6 @@
 
-import { HttpClient } from "@angular/common/http/index.js";
+
+import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 import { Course } from "./course.class.js";
@@ -19,17 +20,23 @@ export class CourseService{ // Classe de Serviço: feito para fornece funções
         return this.httpClient.get<Course[]>(this.courseUrl)
     }
 
-    retriveById(id: number): any{ // : Course estava dando erro
-        return COURSES.find((iterador: Course) => iterador.id === id)
+    retriveById(id: number): Observable<Course> { // : Course estava dando erro
+        return this.httpClient.get<Course>(`${this.courseUrl}/${id}`)
     }
 
-    save(course: Course){
-        if(course.id){
-            const index = COURSES.findIndex((iterator: Course) => iterator.id === course.id)
-            COURSES[index] = course
+    save(course: Course): Observable<Course>{
+       if(course){
+        return this.httpClient.put<Course>(`${this.courseUrl}/${course.id}`, course)
+       } else {
+        return this.httpClient.post<Course>(`${this.courseUrl}`, course)
         }
+    }// end save()
+
+    deleteById(id: number): Observable<any>{
+        return this.httpClient.delete<any>(`${this.courseUrl}/${id}`)
     }
-}
+       
+} // end CourseService
 
 var COURSES: Course[] = [ // Array dos Cursos
     {

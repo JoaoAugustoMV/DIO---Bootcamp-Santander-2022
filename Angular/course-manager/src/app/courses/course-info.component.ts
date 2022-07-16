@@ -15,7 +15,11 @@ export class CourseInfoComponent implements OnInit{
     
     ngOnInit(): void{
         
-        this.course = this.courseService.retriveById(Number(this.activateRoute.snapshot.paramMap.get('id')))
+        this.courseService.retriveById(+this.activateRoute.snapshot.paramMap.get('id')!).subscribe({
+            next: course => {
+                this.course = course
+            }
+        })
         // this.activateRoute => Objeto Route, com os atributos url:'url mesmo', path:'path do RouteModule.forRoot'
         // this.activateRoute.snapshot => Retorna o mesmo do de cima, não entendi a diferença
         // this.activateRoute.snapshot.paramMap => Um map(coleção chave: valor) dos parametros
@@ -23,7 +27,9 @@ export class CourseInfoComponent implements OnInit{
     }
 
     save(){
-        this.courseService.save(this.course)
+        this.courseService.save(this.course).subscribe({
+            next: course => console.log('O curso foi salvo', course)
+        })
     }
 
 }

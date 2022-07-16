@@ -3,7 +3,7 @@
 <hr>
 
 <!-- #variavel de template: Irá verificar se todo o formulário está preenchido -->
-<form #courseForm="ngForm">
+<form #courseForm="ngForm" *ngIf="course">
     <div class="form-group row"> <!--Classes bootstrap-->
         <label for="" class="col-sm-2 col-from-label">Name: </label>
     

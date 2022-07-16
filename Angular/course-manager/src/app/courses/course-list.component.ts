@@ -25,12 +25,21 @@ export class CourseListComponent implements OnInit{ // Deixa o componente visive
 
     ngOnInit(): void{ // Ao carregar a pagina
        // this._courses = this.courseService.trazerTodos() // Irá trazer de course.service.ts, o array de objetos Course
-        this.filteredCourses = this._courses
+        this.retriveAll()
+        console.log(this._courses)
         
     } // end ngOnInit
 
     retriveAll(): void{
      //   this._courses = this.courseService.trazerTodos() //
+        this.courseService.trazerTodos().subscribe({
+            next: courses => { // Se der certo
+                this._courses  = courses
+            }, // end next
+            error: erro => {
+                console.log(erro)
+            }
+        }) // end subscribe
         this.filteredCourses = this._courses
     }
 
@@ -48,6 +57,15 @@ export class CourseListComponent implements OnInit{ // Deixa o componente visive
 
     get filter(){
         return this._filterBy
+    }
+
+    deleteById(courseId: number){
+        this.courseService.deleteById(courseId).subscribe({
+            next: () => {
+                console.log('Delete realizado')
+                this.retriveAll()
+            }
+        })
     }
 
 } // End @Component
