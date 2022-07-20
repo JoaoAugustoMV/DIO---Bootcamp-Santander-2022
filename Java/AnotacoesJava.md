@@ -96,9 +96,12 @@
 - condicao ? seTrue : seFalse;
 
 ---
+# Arrays
 
-
-
+- Exemplos:
+    - String[] nomes = {"Joao", "Ana", "Wagner"} // Arrays de strings
+    - int[ ] notas = new int[5]; // Array vazio de tamanho 5
+    
 # Boas Praticas
 
 - NotaçãoCamelo
