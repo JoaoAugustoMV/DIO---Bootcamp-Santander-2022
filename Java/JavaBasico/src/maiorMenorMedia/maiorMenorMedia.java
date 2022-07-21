@@ -34,5 +34,8 @@ public class maiorMenorMedia {
         
         System.out.println("A media é: "+ soma/notas.length);
         
+        for (int nota : notas) {
+            System.out.println("nota = " + nota);
+        }
     }
 }
