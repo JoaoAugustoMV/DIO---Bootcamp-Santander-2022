@@ -134,7 +134,7 @@
 }``
 
 - Sobrecargas: Criar metodos com mesmo nome com assinaturas diferentes
-    - Cada assinatura terá parametros e/ou retornos diferentes conforme a necessidade
+    - Cada assinatura terá parametros e dependendo deles, o comportamento será diferente
 ---
 
 ## Herança
@@ -176,6 +176,20 @@
     - Exemplo
     - ``interface Pessoa {}``
     ``class Aluno implements Pessoa``
+
+---
+
+# Debug
+
+- Continue: Ir para o proximo breakpoint
+- Step Over: Ir para proxima linha
+- Step Into: Ir para dentro do metodo
+- Step Out: Sair do metodo
+- Evalute Expression: Terminal para teste durante execução
+
+# Exceções
+
+- É um evento que interrompe o fluxo normal de uma classe
 # Boas Praticas
 
 - NotaçãoCamelo
