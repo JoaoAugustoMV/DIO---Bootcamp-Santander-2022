@@ -190,16 +190,55 @@
 # Exceções
 
 - É um evento que interrompe o fluxo normal de uma classe
+- Como tratamento da exceção é possivel evitar a interrupção do código
+- Diferente de um erro, pois uma exceção pode ser tratada e evitada
+
+## Tipos
+
+- Error: Lançado pela JVM, não há como tratar
+    - Ps: Na verdade, não é considerado uma exceção
+- Unchecked(Runtime): **Podem** ser evitadas se tratadas(Erro de lógica)
+    - O compilador não consegue perceber o erro, apenas será lançada na execução
+    - Exemplos:  divisão por 0, acessar não existente posição de array, casting(conversão) invalida
+- Checked: **Devem** ser evitadas e tratadas
+    - O proprio compilador percebe o erro e indica o tratamento
+    - Exemplos: Acessar arquivo que não existe, fechar arquivo que não está aberto
+---
+
+# Coleções
+
+- É um objeto que agrupa varios elementos 
+
+## Composição
+
+- Interfaces
+- Classes ou Implementação
+- Algoritmos
+
+## Hierarquia
+
+- List: Elementos duplicados e garante ordem de inserção
+    - Vector: Mexe com Thread
+    - ArrayList:
+        - Deve usar quando tiver mais pesquisas
+        - Herda apenas de interface Colletion
+    - LinkedList: 
+        - Deve usar quando tiver mais inclusão e exclusão
+        - Herda de interface Colletion e Queue
+- Set
+- Map
+
 # Boas Praticas
 
 - NotaçãoCamelo
     - notaAlunoFinal
 - Var final(constante) em letra Maiusculas separados por "_"
     - CPF_DO_USUARIO
-
+---
 # Lembrar
 
 - Static: Referente a classe(não de objeto)
     - É possivel chamar o metodo sem instanciar um objeto
 - Imprimir Arrays
     - Arrays.toString(Lista)
+- Stream: Coleção de elemento do mesmo tipo da original, mas com metodos adicionais
