@@ -237,7 +237,7 @@
 - Não possui indice
 - Tipos:
     - HashSet: Não mantem nenhum ordem dos elementos(Melhor Performance)
-    - LinkedHashLSet: Mantem a ordem de inserção dos elementos(2 em Performance)
+    - LinkedHashSet: Mantem a ordem de inserção dos elementos(2 em Performance)
     - TreeSet: Mantem a ordem crescente dos elementos(3 em Permformance)
 
 

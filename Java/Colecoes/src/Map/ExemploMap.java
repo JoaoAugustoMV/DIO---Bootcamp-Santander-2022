@@ -46,6 +46,6 @@ public class ExemploMap {
                 System.out.println(modeloMaisEficiente);
             }
         }
-        carrosPopulares.
+        // carrosPopulares.
     }
 }

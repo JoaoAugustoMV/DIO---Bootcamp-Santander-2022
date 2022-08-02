@@ -1,6 +1,5 @@
 package Set;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
@@ -10,7 +9,7 @@ import java.util.stream.Stream;
 public class ExemploSet {
     public static void main(String[] args) {
         
-        Set<Double> notas = new HashSet();
+        Set<Double> notas = new HashSet<Double>();
         notas.add(7d);
         notas.add(8.5d);
         notas.add(9.3d);
