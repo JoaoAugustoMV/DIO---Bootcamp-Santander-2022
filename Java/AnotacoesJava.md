@@ -226,8 +226,29 @@
         - Deve usar quando tiver mais inclusão e exclusão
         - Herda de interface Colletion e Queue
 - Set
+    - Não permite itens duplicados
+    - Não possui indice
+    - Tio
 - Map
 
+## Set
+
+- Não permite itens duplicados
+- Não possui indice
+- Tipos:
+    - HashSet: Não mantem nenhum ordem dos elementos(Melhor Performance)
+    - LinkedHashLSet: Mantem a ordem de inserção dos elementos(2 em Performance)
+    - TreeSet: Mantem a ordem crescente dos elementos(3 em Permformance)
+
+
+## Map
+
+- Conceito de chave: valor
+- Tipos:
+    - HashTable: ThreadSafe
+    - TreeMap: Itera em ordem natural, não permite chave nulas(crescente)(4 em performance)
+    - HashMap: Itera em ordem aleatoria
+    - LinkedHashMap: Itera em ordem de inserção ou ordem de acesso(definida no constructor)
 # Boas Praticas
 
 - NotaçãoCamelo
