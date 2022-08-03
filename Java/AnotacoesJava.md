@@ -249,6 +249,15 @@
     - TreeMap: Itera em ordem natural, não permite chave nulas(crescente)(4 em performance)
     - HashMap: Itera em ordem aleatoria
     - LinkedHashMap: Itera em ordem de inserção ou ordem de acesso(definida no constructor)
+
+##  Stream API
+
+- Forma de manipular de coleções
+    - Source -> Pipeline -> Terminal
+- Classe Anonima: Classe declarada e instaciada na mesma instrução. Usa quando só for utilizar a classe uma vez
+- Functional Interface: Qualquer Interface SAM(Single Abstract Method). Metodo abstrato é metodo que será herdado pela classe filha, e nela terá um comportamento será definido na subclasse
+- Lambda: Função sem nome, declarado e usado na mesma instrução. (argumento) -> (corpo)
+- Reference Method: "Simplificar um função lambda" ::metodo sem parenteses
 # Boas Praticas
 
 - NotaçãoCamelo
