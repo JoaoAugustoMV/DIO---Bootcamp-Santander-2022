@@ -118,6 +118,7 @@
 ## Classe  
 
 - Classe: **Estrutura** que define objetos semelhantes
+    - Classe Abstrata: Não pode ser instanciada
 
 ## Atributo
 
@@ -272,3 +273,44 @@
 - Imprimir Arrays
     - Arrays.toString(Lista)
 - Stream: Coleção de elemento do mesmo tipo da original, mas com metodos adicionais
+
+
+# Internet
+
+## Protocolo HTTP
+
+- Hyper Text Transfer Protocol
+- Comunicação entre Cliente(Navegador) e Servidor
+    - Servidor armazena objetos web
+    - Cliente faz request HTTP
+    - Servidor faz response HTTP (Protocolo TCP)
+### HTTP Response
+
+- Information response(100-199)
+- Succesul response(200-299)
+- Redirection response(300-399)
+- Client error response(400-499)
+- Server error response(500-599)
+
+## Cookies e Caches
+
+- Cookies: Dados guardados do cliente  
+    - de sessão
+    - de perssistentes
+- Web Caches: Quando houver um request, o proxy server verifica se possui as informações atualizadas, se tiver faz o response, se não, pede ao servidor 
+
+## HTTP 2.0
+
+- Permite fazer varias requisões independentes ao mesmo tempo
+- Priorizar pesos(quais infos tem prioridade)
+- Unica conexao persistente
+- Server push
+- HTTPS por padrão- TLS
+
+# Spring Boot
+
+- Facilitar setup de projetos Spring
+- mvn spring-boot:run
+- Profiles: Config especificas para cada ambiente
+    - application-nomeDoProfiles.properties
+    - @Profile(nomeDoProfile)
