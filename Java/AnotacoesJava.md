@@ -118,6 +118,7 @@
 ## Classe  
 
 - Classe: **Estrutura** que define objetos semelhantes
+    - Classe Abstrata: Não pode ser instanciada
 
 ## Atributo
 
@@ -272,3 +273,95 @@
 - Imprimir Arrays
     - Arrays.toString(Lista)
 - Stream: Coleção de elemento do mesmo tipo da original, mas com metodos adicionais
+
+
+# Internet
+
+## Protocolo HTTP
+
+- Hyper Text Transfer Protocol
+- Comunicação entre Cliente(Navegador) e Servidor
+    - Servidor armazena objetos web
+    - Cliente faz request HTTP
+    - Servidor faz response HTTP (Protocolo TCP)
+### HTTP Response
+
+- Information response(100-199)
+- Succesul response(200-299)
+- Redirection response(300-399)
+- Client error response(400-499)
+- Server error response(500-599)
+
+## Cookies e Caches
+
+- Cookies: Dados guardados do cliente  
+    - de sessão
+    - de perssistentes
+- Web Caches: Quando houver um request, o proxy server verifica se possui as informações atualizadas, se tiver faz o response, se não, pede ao servidor 
+
+## HTTP 2.0
+
+- Permite fazer varias requisões independentes ao mesmo tempo
+- Priorizar pesos(quais infos tem prioridade)
+- Unica conexao persistente
+- Server push
+- HTTPS por padrão- TLS
+
+# Spring / Spring Boot
+
+## Spring
+- Modulizado
+- Baseado em inversão de controle e injeção de dependencia
+    - Inversão de controle: Dividir responsabilidade de codigo atraves de container
+    - Injeção de dependencia: Atribuir 
+- Beans: Objetos criados e gerenciados por um container atraves da inversão de controle
+    - Possui 5 tipos de escopos
+    - Singleton: Define apenas uma instancia para toda aplicação
+    - Prototype: Instancia a cada nova solicitação ao container
+    - Request(HTTP): Um Bean para cada requisição HTTP, existe durante o processo
+    - Session(HTTP): Um Bean para sessão HTTP, existe enquanto a sessão estiver ativa
+    - Global(HTTP): Bean para o ciclo de vida da aplicação
+- Autowired: Uma anotação para injeção automatica, indicado pela interface ou classe
+    - byName: busca um metodo set
+    - byType:
+    - byConstructor:
+- Usar Component quando tiver acesso ao codigo, do contrario usar Bean
+
+- Padroes de Projeto no Spring
+    - Singleton: @Bean e @Autowired
+    - Strategy: @Serve e @Repository
+    - Facade: API REST
+### JPA: Java Perssitence API
+- Baseada em Interface e ORM
+- Principal implementação: Hibernate
+- ORM: Object Relational Mapping: Aproximar POO a banco de dados relacional
+
+## SpringBoot
+
+- Facilitar setup de projetos Spring
+- Starters: Dependencias
+- mvn spring-boot:run
+- Profiles: Config especificas para cada ambiente
+    - application-nomeDoProfiles.properties
+    - @Profile(nomeDoProfile)
+
+### SpringBoot Security
+
+- Grupo de filtros de servlet para adicionar autenticação e autorização
+- JWT: JSON Web Token é um padrao da internet para criptografia
+
+
+# Padrões de Projeto
+
+## Singleton
+
+- Criação de uma unica instancia de uma classe e poder recuperar
+    - Exemplo: Pull de bd e camada de negocio
+
+## Strategy
+
+- Simplificar variação de algoritmos para a resolução do mesmo problema
+    - Polimorfismo
+
+## Facede
+- Interface que facilita integrações com subsistema
